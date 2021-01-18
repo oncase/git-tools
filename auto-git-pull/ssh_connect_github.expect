@@ -1,0 +1,6 @@
+#!/usr/bin/expect -f
+spawn ssh -T git@github.com
+expect "*: "
+send "yes\r"
+expect "$ "
+send "exit\r"
