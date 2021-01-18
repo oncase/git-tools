@@ -1,5 +1,5 @@
 # Get external parameters
-while getopts k:f:r option
+while getopts k:f:r: option
 do
 case "${option}"
 in

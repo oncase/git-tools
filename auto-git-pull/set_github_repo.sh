@@ -2,7 +2,7 @@
 # In order to acess the git's repo without credentials.
 
 # Get external parameters
-while getopts p:r:n option
+while getopts p:r:n: option
 do
 case "${option}"
 in
