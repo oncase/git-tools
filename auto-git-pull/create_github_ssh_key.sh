@@ -15,7 +15,7 @@ done
 mkdir ~/.ssh
 
 # Create the SSH Key without passphrase.
-printf ~/.ssh/$KEY_NAME | ssh-keygen -t ed25519 -C "$USER_EMAIL"
+echo ~/.ssh/$KEY_NAME | ssh-keygen -t ed25519 -C "$USER_EMAIL"
 
 # Adding to the ssh-agent.
 eval "$(ssh-agent -s)"

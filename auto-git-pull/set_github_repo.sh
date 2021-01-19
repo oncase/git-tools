@@ -13,4 +13,8 @@ esac
 done
 
 # Setting up your Github repository
+echo $REPO_PATH
+echo $REPO_REMOTE
+echo $REPO_NAME
 cd $REPO_PATH && git remote set-url $REPO_REMOTE git@github.com:$REPO_NAME.git
+echo "git remote set-url $REPO_REMOTE git@github.com:$REPO_NAME.git"

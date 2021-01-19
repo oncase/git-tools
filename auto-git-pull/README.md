@@ -82,7 +82,7 @@ crontab -e
 In the editor that was spawned add the following line:
 
 ```{shell}
-* * * * * cd {PATH_TO_"auto-git-pull"_FOLDER} && ./update_repo.sh -k {KEY_NAME_OF_YOUR_DESIRE} -r {{REPO_PATH_IN_YOUR_MACHINE} -f {FILE_PATH_TO_STORE_LOG}
+* * * * * cd {PATH_TO_"auto-git-pull"_FOLDER} && ./cron_update_repo.sh -k {KEY_NAME_OF_YOUR_DESIRE} -r {{REPO_PATH_IN_YOUR_MACHINE} -f {FILE_PATH_TO_STORE_LOG}
 ```
 
 And that is it!
