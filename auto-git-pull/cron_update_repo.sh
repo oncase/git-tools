@@ -6,17 +6,19 @@ do
     case "${option}"
     in
     k) KEY_NAME=${OPTARG};;
-    f) FILE_PATH=${OPTARG};;
+    f) FOLDER_PATH=${OPTARG};;
     p) REPO_PATH=${OPTARG};;
     esac
 done
 
+# Create Initial Folder
+mkdir $FOLDER_PATH\logs-auto-git-pull
+# Create today's folder
 today=$(date +%d-%m-%Y)
-folder_path=$FILE_PATH$today
-
+folder_path=$FOLDER_PATH\logs-auto-git-pull/$today
 mkdir $folder_path
 
-FILE_PATH=$FILE_PATH$today/cronjob_auto-git-pull.log
+FILE_PATH=$folder_path/cronjob_auto-git-pull.log
 
 # Logging all activity
 echo "*** TURN: " >> $FILE_PATH

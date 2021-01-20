@@ -22,7 +22,7 @@ cd ~/git-tools/auto-git-pull
 ./create_github_ssh_key.sh -u tonystark@gmail.com -k my_pc10
 #Add SSH Key in your Git account
 ./set_github_repo.sh -p ~/Projects/Jarvis -n tonystark/jarvis
-./cron_set.sh -k my_pc10 -p ~/Projects/Jarvis -t "* 1 * * *" -f ~/logfiles
+./cron_set.sh -k my_pc10 -p ~/Projects/Jarvis -t "* 1 * * *" -f ~/logfiles/
 ```
 If he had already a SSH key, he'd just use the two last commands, and if his repository
 was already connected via SSH he'd just use the last command.
@@ -106,13 +106,15 @@ For the time part, I recommend using https://crontab.guru/ . It is a free websit
 The following command installs the crontab with just the necessary parameters.
 
 ```{bash}
-./cron_set.sh -k {KEY_NAME_OF_YOUR_DESIRE} -p {REPO_PATH} -t {TIME_SPAN_CRONTAB} -f {PATH_TO_SAVE_LOGS}
+./cron_set.sh -k {KEY_NAME_OF_YOUR_DESIRE} -p {REPO_PATH} -t {TIME_SPAN_CRONTAB} -f {FOLDER_PATH_TO_SAVE_LOGS}
 ```
+
+The log will be saved in the folder that you specify with the -f flag. It will first create the logs-auto-git-pull folder, then everyday it will create a new subfolder with the date and save the actual log inside it.
 
 Example:
 
 ```{bash}
-./cron_set.sh -k my_pc -p ~/cool_project_folder -t '0,30 * * * *' -f ~/cronlogs/update_repo.log
+./cron_set.sh -k my_pc -p ~/cool_project_folder -t '0,30 * * * *' -f ~/cronlogs/
 ```
 
 And that is it!
