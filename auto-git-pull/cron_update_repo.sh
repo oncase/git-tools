@@ -11,6 +11,13 @@ do
     esac
 done
 
+today=$(date +%d-%m-%Y)
+folder_path=$FILE_PATH$today
+
+mkdir $folder_path
+
+FILE_PATH=$FILE_PATH$today/cronjob_auto-git-pull.log
+
 # Logging all activity
 echo "*** TURN: " >> $FILE_PATH
 
