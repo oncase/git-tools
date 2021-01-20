@@ -1,5 +1,8 @@
+#!/bin/bash
+
 # Script to create pair of SSH Key automatically to be used in a Github repository.
-# It follows the Github guide: https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh 
+# It follows the Github guide: 
+#https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh 
 
 # Get external parameters
 while getopts u:k: option

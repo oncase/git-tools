@@ -1,12 +1,14 @@
+#!/bin/bash
+
 # Get external parameters
-while getopts k:f:r: option
+while getopts k:f:p: option
 do
-case "${option}"
-in
-k) KEY_NAME=${OPTARG};;
-f) FILE_PATH=${OPTARG};;
-r) REPO_PATH=${OPTARG};;
-esac
+    case "${option}"
+    in
+    k) KEY_NAME=${OPTARG};;
+    f) FILE_PATH=${OPTARG};;
+    p) REPO_PATH=${OPTARG};;
+    esac
 done
 
 # Logging all activity

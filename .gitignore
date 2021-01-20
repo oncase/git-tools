@@ -1,2 +1,7 @@
+# auto-git-pull
+
+# If the user wish to log inside the dir.
 *.log
+# Dev-related
 TODO.md
+test.sh
